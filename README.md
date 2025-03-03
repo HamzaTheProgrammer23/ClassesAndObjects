@@ -61,3 +61,81 @@
 }
 }
 }
+class ClassesAndObjects{
+        class Reel {
+
+        private String userId;
+        private int lengthInSeconds;
+        private int numberOfLikes;
+        private int numberOfShares;
+        private String backgroundSong;
+
+    public Reel(String userId, int lengthInSeconds, int numberOfLikes, int numberOfShares, String backgroundSong) {
+            this.userId = userId;
+            this.lengthInSeconds = lengthInSeconds;
+            this.numberOfLikes = numberOfLikes;
+            this.numberOfShares = numberOfShares;
+            this.backgroundSong = backgroundSong;
+        }
+
+        public String getUserId() {
+            return userId;
+        }
+        public String setUserId(String userId) {
+            this.userId = userId;
+            return userId;
+        }
+        public int getLengthInSeconds() {
+            return lengthInSeconds;
+        }
+        public void setLengthInSeconds(int lengthInSeconds) {
+            this.lengthInSeconds = lengthInSeconds;
+        }
+
+        public int getNumberOfLikes() {
+            return numberOfLikes;
+        }
+
+        public void setNumberOfLikes(int numberOfLikes) {
+            this.numberOfLikes = numberOfLikes;
+        }
+
+        public int getNumberOfShares() {
+            return numberOfShares;
+        }
+
+        public void setNumberOfShares(int numberOfShares) {
+            this.numberOfShares = numberOfShares;
+        }
+
+        public String getBackgroundSong() {
+            return backgroundSong;
+        }
+
+        public void setBackgroundSong(String backgroundSong) {
+            this.backgroundSong = backgroundSong;
+        }
+
+        // Method to display reel details (Optional but helpful for testing)
+        public void displayReelDetails() {
+            System.out.println("User ID: " + userId);
+            System.out.println("Reel Length: " + lengthInSeconds + " seconds");
+            System.out.println("Likes: " + numberOfLikes);
+            System.out.println("Shares: " + numberOfShares);
+            System.out.println("Background Song: " + backgroundSong);
+        }
+    }
+
+
+    public class Main {
+        public static void main(String[] args) {
+
+            Reel reel1 = new Reel("user1", 30, 1500, 300, "Blinding Lights");
+            Reel reel2 = new Reel("user2", 45, 500, 100, "Levitating");
+
+            reel1.displayReelDetails();
+            System.out.println();
+            reel2.displayReelDetails();
+        }
+        }
+    }
